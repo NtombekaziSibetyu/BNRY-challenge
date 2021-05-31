@@ -1,5 +1,9 @@
 const express = require('express'),
-const app = express(),
+ app = express() 
+
+app.use(express.json({ extended : false }))
+
+app.use('/api/articles', require('./routes/articles'));
   
 port = process.env.PORT || 3000;
 
