@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/NtombekaziSibetyu/BNRY-challenge/issues"
   },
-  "homepage": "https://github.com/NtombekaziSibetyu/BNRY-challenge#readme"
+  "homepage": "https://github.com/NtombekaziSibetyu/BNRY-challenge#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
