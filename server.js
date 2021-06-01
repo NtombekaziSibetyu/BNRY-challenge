@@ -12,6 +12,6 @@ app.use(express.json({ extended : false }));
 
 app.use('/',require('./routes/articles'))
 
-app.set('views','./views')
+app.set('views','./client/src/app')
 
 app.listen(port,()=> console.log("started"))
