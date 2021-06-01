@@ -1,12 +1,17 @@
-const express = require('express'),
- app = express() 
+const express = require('express')
+const app = express()
+const port = process.env.PORT||3000;
+const moment = require('moment')
+app.locals.moment = moment;
 
-app.use(express.json({ extended : false }))
+// template engine  
+app.use(express.static('public'))
+app.set('view engine','ejs')
 
-app.use('/api/articles', require('./routes/articles'));
-  
-port = process.env.PORT || 3000;
+app.use(express.json({ extended : false }));
 
-app.listen(port);
+app.use('/',require('./routes/articles'))
 
-console.log('todo list RESTful API server started on: ' + port);
+app.set('views','./views')
+
+app.listen(port,()=> console.log("started"))

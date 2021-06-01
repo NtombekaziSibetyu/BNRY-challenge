@@ -1,21 +1,44 @@
-const express = require('express');
-const router = express.Router();
-const axios = require('axios');
+const express = require('express')
+const axios = require('axios')
+const router=express.Router()
+const moment = require('moment')
+const math = require('math')
 
-//ROUTE TO GET ALL ARTICES FRO THE 
-//@api/articles
-//GET
-router.get('/articles',
-async (req, res) => { 
+
+router.get('/',async(req,res)=>{
     try {
-       await axios.get('https://newsapi.org/v2/everything?q=tesla&from=2021-04-30&sortBy=publishedAt&apiKey=API_KEY').
-        then((res) => {
-            res.json();
-          })
-        
-        
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
+        var url = 'http://newsapi.org/v2/top-headlines?' +
+          'country=in&' +
+          'apiKey=098fc5081e7b4f65b49db982d0480f50';
+
+        const news_get =await axios.get(url)
+        res.render('news',{articles:news_get.data.articles})
+
+    } catch (error) {
+        if(error.response){
+            console.log(error)
+        }
+
     }
-});
+})
+
+router.post('/search',async(req,res)=>{
+    const search=req.body.search
+    // console.log(req.body.search)
+
+    try {
+        var url = `http://newsapi.org/v2/everything?q=${search}&apiKey={YOUR_API}`
+
+        const news_get =await axios.get(url)
+        res.render('news',{articles:news_get.data.articles})
+
+    } catch (error) {
+        if(error.response){
+            console.log(error)
+        }
+
+    }
+})
+
+
+module.exports=router
