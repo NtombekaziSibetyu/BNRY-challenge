@@ -6,9 +6,8 @@ const router=express.Router()
 
 
 router.get('/',async(req,res)=>{
-    var date = Date.now()
     try {
-        var url = `https://newsapi.org/v2/everything?q=apple&from=${date}&sortBy=publishedAt&apiKey=098fc5081e7b4f65b49db982d0480f50`;
+        var url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=098fc5081e7b4f65b49db982d0480f50`;
 
         const news_get =await axios.get(url)
         // res.render('news',{articles:news_get.data.articles});
@@ -23,7 +22,7 @@ router.get('/',async(req,res)=>{
 })
 
 router.post('/search',async(req,res)=>{
-    const search=req.body.search
+    const search = req.body.search
     // console.log(req.body.search)
 
     try {
