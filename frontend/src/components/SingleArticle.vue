@@ -25,7 +25,8 @@
       <v-btn icon>
         <v-icon>mdi-share-variant</v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn icon
+      >
         <v-icon>mdi-bookmark</v-icon>
       </v-btn>
 
@@ -36,7 +37,7 @@
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
-    <v-transition-group>
+    <div v-show="show">
       <v-expand-transition>
         <div v-show="show">
           <v-divider></v-divider>
@@ -60,7 +61,7 @@
         </div>
         
       </v-expand-transition>
-    </v-transition-group>
+    </div>
     <!-- <v-expand-transition>
       <div v-show="show">
         <v-divider></v-divider>
@@ -96,11 +97,11 @@ export default {
 top: 20px;
 margin: 10 auto;
 padding: 10px;
-border-radius: 5%;
+border-radius: 10%;
 }
 a {
   text-decoration-line: none;
   text-decoration: none;
-  color: orange lighten-2;
+  color: rgb(79, 45, 134) lighten-2;
 }
 </style>

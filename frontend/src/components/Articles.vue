@@ -3,22 +3,34 @@
      <div class="text-center">
        <h1>Top Headlines in Bussiness</h1>
      </div>
-       <div class="row">
-            <v-text-field
+      <div class="row">
+        <v-col cols="9">
+          <v-text-field
+            class="text-field"
             v-model="search.search"
             outlined
+            rounded
             label="Search"
+            max-width
             prepend-inner-icon="mdi-search"
             clearable
           ></v-text-field>
-          <v-btn
+         
+        </v-col>
+        <v-col cols="3">
+           <v-btn
+            class="button"
             outlined
+            elevation="1"
+            medium
+            x-large
             color="indigo"
             @click="searchArticles"
           >
             Search
           </v-btn>
-       </div>
+        </v-col>
+      </div>
        <v-container fluid>
          <v-row dense>
            <v-col class="articles"
@@ -129,12 +141,28 @@ export default {
 .row {
   margin: 0 auto;
   padding: 10px;
-
+  justify-content: space-between;
+  justify-items: center;
 }
 .articles {
-margin: 10 auto;
+margin: 0 auto;
 display: flex;
 flex-wrap: wrap;
 padding: 10px;
+}
+.text-center{
+  top: 20px;
+  margin: 0 auto ;
+  padding: 10px;
+}
+.text-field {
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 120px;
+}
+.button {
+  margin: 0 auto;
+  padding: 10px;
 }
 </style>
