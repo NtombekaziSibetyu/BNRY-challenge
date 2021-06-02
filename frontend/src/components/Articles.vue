@@ -12,6 +12,8 @@
             rounded
             label="Search"
             max-width
+            color="black"
+            background-color="white"
             prepend-inner-icon="mdi-search"
             clearable
           ></v-text-field>
@@ -24,7 +26,7 @@
             elevation="1"
             medium
             x-large
-            color="indigo"
+            color="black"
             @click="searchArticles"
           >
             Search

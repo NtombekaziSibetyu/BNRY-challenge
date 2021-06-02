@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="purple accent-4"
+      color="black"
       dense
       height="80"
     >

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <Articles />
   </div>
 </template>
@@ -14,3 +14,8 @@
     },
   }
 </script>
+<style scoped>
+.home {
+  background: rgb(192, 192, 192);
+}
+</style>
