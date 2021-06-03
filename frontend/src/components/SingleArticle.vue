@@ -7,7 +7,8 @@
     <v-img
       :src="article.urlToImage"
       height="300"
-    ></v-img>
+    >
+    </v-img>
 
     <v-card-title>
       {{ article.title}}
@@ -16,21 +17,15 @@
     <v-card-subtitle>
       {{ Date(article.publishedAt).toString() }} 
     </v-card-subtitle>
-    <v-card-text>
-        
-    </v-card-text>
-
+  
     <v-card-actions>
 
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>mdi-share-variant</v-icon>
       </v-btn>
-      <v-btn icon
-        
-      >
-        <v-icon color=""
-        >mdi-bookmark</v-icon>
+      <v-btn icon>
+        <v-icon>mdi-bookmark</v-icon>
       </v-btn>
 
       <v-btn
@@ -40,9 +35,10 @@
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
+
     <div v-show="show">
       <v-expand-transition>
-        <div v-show="show">
+        <div>
           <v-divider></v-divider>
 
           <v-card-text>
@@ -52,13 +48,12 @@
         
       </v-expand-transition>
       <v-expand-transition>
-        <div v-show="show">
+        <div >
           <v-btn
           color="orange lighten-2"
           text
           >
-          <a :href="article.url" target="_blank" color="orange lighten-2" > Read more..</a>
-          
+            <a :href="article.url" target="_blank" color="orange lighten-2" > Read more..</a>
           </v-btn>
         </div>
         

@@ -1,17 +1,15 @@
 <template>
    <div class="articles-list">
        <v-container fluid>
-         <v-row dense>
-           <v-col class="articles"
-            v-for="news in articles" 
-            :key="news.id"
-            >
-             <SingleArticle :article="news" />
-           </v-col>
-        </v-row>
-
+          <v-row dense>
+              <v-col class="articles"
+                v-for="news in articles" 
+                :key="news.id"
+              >
+                <SingleArticle :article="news" />
+              </v-col>
+          </v-row>
        </v-container>
-      
   </div>
 </template>
 
@@ -24,15 +22,12 @@ export default {
         return {
             articles : [],
             error : null,
-            
         }
     },
     mounted() {
       this.getArticles();
     },
-    // updated() {
-    //   this.searchArticles();
-    // },
+    
     methods : {
         getArticles() {
             let url = "http://localhost:3000/api/articles"
@@ -49,12 +44,10 @@ export default {
                 } else {
                     this.overlay = false;
                     this.articles = json.articles;
-                    console.log(json.articles)
                     }
             })
             .catch(err => console.log('err->',err))
             },
-        
       },
         
     }
@@ -62,7 +55,6 @@ export default {
 </script>
 
 <style scoped>
-
 .articles {
 margin: 0 auto;
 display: flex;

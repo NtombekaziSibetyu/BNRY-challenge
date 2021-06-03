@@ -4,38 +4,37 @@
        <h1>Top Headlines in Bussiness</h1>
     </div>
     <div class="row">
-        <v-col cols="9">
-          <v-text-field
-            class="text-field"
-            v-model="search.search"
-            outlined
-            rounded
-            label="Search"
-            max-width
-            background-color="white"
-            prepend-inner-icon="mdi-magnify"
-            clearable
-          ></v-text-field>
-        </v-col>
-        <v-col cols="3">
-           <v-btn
-            class="button"
-            outlined
-            elevation="1"
-            medium
-            x-large
-            @click="searchArticles"
-          >
-            Search
-          </v-btn>
-        </v-col>
-      </div>
+      <v-col cols="9">
+        <v-text-field
+          class="text-field"
+          v-model="search.search"
+          outlined
+          rounded
+          label="Search"
+          max-width
+          background-color="white"
+          prepend-inner-icon="mdi-magnify"
+          clearable
+        ></v-text-field>
+      </v-col>
+      <v-col cols="3">
+          <v-btn
+          class="button"
+          outlined
+          rounded
+          medium
+          x-large
+          @click="searchArticles"
+        >
+          Search
+        </v-btn>
+      </v-col>
+    </div>
     <Articles :articles="searched_articles"/>
   </div>
 </template>
 
 <script>
-  // import HelloWorld from '../components/HelloWorld'
   import Articles from  '../components/Articles'
   export default {
     name: 'Home',
@@ -76,7 +75,7 @@
 </script>
 <style scoped>
 .home {
-  background: rgb(236, 236, 236);
+  background: rgb(251, 255, 255);
 }
 .text-center{
   top: 20px;
@@ -99,8 +98,7 @@
 .button {
   margin: 0 auto;
   padding: 10px;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: rgb(26, 138, 138);
-  border-radius: 5%;
 }
 </style>
