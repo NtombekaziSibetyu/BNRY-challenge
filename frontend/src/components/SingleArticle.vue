@@ -42,18 +42,17 @@
           <v-divider></v-divider>
 
           <v-card-text>
-            {{ article.description}}
+            {{ article.description }}
           </v-card-text>
         </div>
-        
       </v-expand-transition>
       <v-expand-transition>
         <div >
           <v-btn
-          color="orange lighten-2"
+          color="cyan"
           text
           >
-            <a :href="article.url" target="_blank" color="orange lighten-2" > Read more..</a>
+            <a :href="article.url" target="_blank" > Read more..</a>
           </v-btn>
         </div>
         
