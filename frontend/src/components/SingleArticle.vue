@@ -2,6 +2,7 @@
   <v-card
     class="mx-auto"
     width="600"
+    id="card"
   >
     <v-img
       :src="article.urlToImage"
@@ -13,7 +14,7 @@
     </v-card-title>
 
     <v-card-subtitle>
-      {{ article.publishedAt}}
+      {{ Date(article.publishedAt).toString() }} 
     </v-card-subtitle>
     <v-card-text>
         
@@ -26,8 +27,10 @@
         <v-icon>mdi-share-variant</v-icon>
       </v-btn>
       <v-btn icon
+        
       >
-        <v-icon>mdi-bookmark</v-icon>
+        <v-icon color=""
+        >mdi-bookmark</v-icon>
       </v-btn>
 
       <v-btn
@@ -53,7 +56,6 @@
           <v-btn
           color="orange lighten-2"
           text
-          @click="readMore"
           >
           <a :href="article.url" target="_blank" color="orange lighten-2" > Read more..</a>
           
@@ -83,11 +85,6 @@ export default {
           show: false,
         }
     },
-    methods: {
-      readMore() {
-
-      }
-    }
 
 }
 </script>
@@ -97,11 +94,16 @@ export default {
 top: 20px;
 margin: 10 auto;
 padding: 10px;
-border-radius: 10%;
+
 }
 a {
   text-decoration-line: none;
   text-decoration: none;
-  color: rgb(79, 45, 134) lighten-2;
+  color: rgb(26, 138, 138);
 }
+#card {
+border-radius: 5%;
+box-shadow: darkgray;
+}
+
 </style>

@@ -1,5 +1,5 @@
 # BNRY-challenge
-// The app is a news app that shows the top headlines recently at the moment
+ The app is a news app that shows the top headlines recently at the moment
  
  TO search for a specific news article you type in any word related to what you are looking for in the
  search field provided at the top. and the click on the search button next to it.

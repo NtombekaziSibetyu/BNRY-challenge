@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-app-bar
-      color="black"
+      id="nav"
       dense
       height="80"
     >
       <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
-
+      
       <v-toolbar-title style="font-size : 30px; color : white">News Headlines</v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -36,5 +36,9 @@ export default {
 </script>
 
 <style>
+#nav {
+  background-color: rgb(26, 138, 138);
+  background: rgb(26, 138, 138);
+}
 
 </style>
