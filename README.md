@@ -4,6 +4,9 @@
  TO search for a specific news article you type in any word related to what you are looking for in the
  search field provided at the top. and the click on the search button next to it.
  The results will be articles that contain the word/s that you searched.
+ 
+ click on the arrow on the bottom right of the the card to read the article discription
+ click on read more to read the whole article
 
  
 # Application Set up
