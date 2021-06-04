@@ -3,10 +3,10 @@
        <v-container fluid>
           <v-row dense>
               <v-col class="articles"
-                v-for="news in articles" 
-                :key="news.id"
+                v-for="article in articles" 
+                :key="article.id"
               >
-                <SingleArticle :article="news" />
+                <SingleArticle :article="article" />
               </v-col>
           </v-row>
        </v-container>
@@ -27,7 +27,6 @@ export default {
     mounted() {
       this.getArticles();
     },
-    
     methods : {
         getArticles() {
             let url = "http://localhost:3000/api/articles"

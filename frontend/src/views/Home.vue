@@ -30,7 +30,7 @@
         </v-btn>
       </v-col>
     </div>
-    <Articles :articles="searched_articles"/>
+    <Articles :articles="articles"/>
   </div>
 </template>
 
@@ -44,7 +44,7 @@
     data() {
       return {
         search : {},
-        searched_articles : []
+        articles : []
       }
     },
     methods : {
@@ -65,7 +65,7 @@
                   this.overlay = false;
               } else {
                   this.overlay = false;
-                  this.searched_articles = json.articles;
+                  this.articles = json.articles;
                   }
           })
           .catch(err => console.log('err->',err))
