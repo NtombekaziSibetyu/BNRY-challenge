@@ -1,8 +1,10 @@
 <template>
   <div class="home">
+    <!-- app header -->
     <div class="text-center">
        <h1>Top Headlines in Bussiness</h1>
     </div>
+    <!-- search app search area -->
     <div class="row">
       <v-col cols="9">
         <v-text-field
@@ -17,6 +19,7 @@
           clearable
         ></v-text-field>
       </v-col>
+      <!-- button that triggers the search function -->
       <v-col cols="3">
           <v-btn
           class="button"
@@ -30,6 +33,7 @@
         </v-btn>
       </v-col>
     </div>
+    <!-- article cards -->
     <Articles :articles="articles"/>
   </div>
 </template>
@@ -48,6 +52,7 @@
       }
     },
     methods : {
+      // search function takes in search object returns articles matching the search
       searchArticles() {
           let url = `http://localhost:3000/api/articles/search`
           let data = this.search

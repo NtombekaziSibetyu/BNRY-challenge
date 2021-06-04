@@ -25,9 +25,11 @@ export default {
         }
     },
     mounted() {
+    // function get triggered when app mounts
       this.getArticles();
     },
     methods : {
+        // function gets all top hedlines from the newsapi
         getArticles() {
             let url = "http://localhost:3000/api/articles"
             fetch(url, {

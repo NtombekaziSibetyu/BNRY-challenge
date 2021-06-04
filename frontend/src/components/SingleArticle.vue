@@ -4,16 +4,17 @@
     width="600"
     id="card"
   >
+  <!-- article image -->
     <v-img
       :src="article.urlToImage"
       height="300"
     >
     </v-img>
-
+  <!-- article title -->
     <v-card-title>
       {{ article.title}}
     </v-card-title>
-
+  <!-- article published date and time -->
     <v-card-subtitle>
       {{ Date(article.publishedAt).toString() }} 
     </v-card-subtitle>
@@ -35,7 +36,7 @@
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
-
+    <!-- card expansion with the article discription -->
     <div v-show="show">
       <v-expand-transition>
         <div>
@@ -58,16 +59,7 @@
         
       </v-expand-transition>
     </div>
-    <!-- <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
 
-        <v-card-text>
-          {{ article.description}}
-        </v-card-text>
-      </div>
-      
-    </v-expand-transition> -->
   </v-card>
 </template>
 
