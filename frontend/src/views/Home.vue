@@ -49,7 +49,7 @@
     },
     methods : {
       searchArticles() {
-          let url = `http://localhost:3000/api/articles/search`
+          let url = `https://newsheadlines-app.herokuapp.com/api/articles/search`
           let data = this.search
           console.log(data)
           fetch(url, {
