@@ -29,7 +29,7 @@ export default {
     },
     methods : {
         getArticles() {
-            let url = "https://newsheadlines-app.herokuapp.com/api/articles"
+            let url = "http://localhost:3000/api/articles"
             fetch(url, {
             method:"GET", 
             mode : 'cors',
