@@ -31,7 +31,7 @@ export default {
     methods : {
         // function gets all top hedlines from the newsapi
         getArticles() {
-            let url = "http://localhost:3000/api/articles"
+            let url = "https://newsheadlines-app.herokuapp.com/api/articles"
             fetch(url, {
             method:"GET", 
             mode : 'cors',
